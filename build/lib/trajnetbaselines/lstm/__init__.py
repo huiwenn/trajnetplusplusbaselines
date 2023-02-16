@@ -1,8 +1,3 @@
-import sys
-sys.path.append("../")
-sys.path.append("../..")
-
-
 from .loss import PredictionLoss, L2Loss
 from .lstm import LSTM, LSTMPredictor
 from .gridbased_pooling import GridBasedPooling

@@ -222,6 +222,7 @@ def eval(gt, input_file, args):
     
     for scene in reader_gt.scenes_by_id:
         tags = reader_gt.scenes_by_id[scene].tag
+        #indexes[tags].append(scene)
         main_type, sub_types = tags[0], tags[1]
         indexes[main_type].append(scene)
         for sub_type in sub_types:
@@ -259,3 +260,4 @@ def trajnet_evaluate(args):
 
     # Output Result Table
     table.print_table()
+    return results

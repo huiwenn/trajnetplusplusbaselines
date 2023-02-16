@@ -13,7 +13,7 @@ def main():
                         help='sample ratio of val set given the train set')
     args = parser.parse_args()
 
-    args.path = 'DATA_BLOCK/' + args.path
+    args.path =  'DATA_BLOCK/' + args.path #
     
     ## Prepare destination folder containing dataset with train and val split
     args.dest_path = args.path + '_split'

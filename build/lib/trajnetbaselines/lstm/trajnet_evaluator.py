@@ -64,7 +64,8 @@ def get_predictions(args):
             # Write all predictions
             write_predictions(pred_list, scenes, model_name, dataset_name, args)
 
-def pars_args():
+
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--path', default='trajdata',
                         help='directory of data to test')
@@ -85,11 +86,7 @@ def pars_args():
     parser.add_argument('--modes', default=1, type=int,
                         help='number of modes to predict')
     args = parser.parse_args()
-    return args
 
-
-def main():
-    args = pars_args()
     scipy.seterr('ignore')
 
     args.output = args.output if args.output is not None else []
